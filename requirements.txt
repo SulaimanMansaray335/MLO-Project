@@ -7,4 +7,5 @@ matplotlib
 scipy
 catboost
 xgboost
-#-e .
+dill
+-e .
