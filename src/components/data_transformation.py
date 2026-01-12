@@ -12,11 +12,16 @@ from src.logger import logging
 import os
 
 from src.utils import save_object
+from pathlib import Path 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts" 
+ARTIFACTS_DIR.mkdir(parents = True, exist_ok = True)
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join('artifacts', "preprocessor.pk1")
+    preprocessor_obj_file_path = os.path.join(ARTIFACTS_DIR, "preprocessor.pk1")
+    #trained_model_file_path = str(ARTIFACTS_DIR / "preprocessor.pk1")
 
 class DataTransformation:
     def __init__(self):

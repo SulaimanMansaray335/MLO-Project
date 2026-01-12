@@ -1,10 +1,10 @@
 pandas 
 numpy
-#seaborn
+seaborn
 scikit-learn
-#statsmodels
-#matplotlib
-#scipy
+statsmodels
+matplotlib
+scipy
 catboost==1.2.7
 xgboost-cpu
 dill

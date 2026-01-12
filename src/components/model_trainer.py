@@ -12,10 +12,17 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from src.exception import CustomException
 from src.logger import logging
 from src.utils import save_object, evaluate_models
+from pathlib import Path    
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts" 
+ARTIFACTS_DIR.mkdir(parents = True, exist_ok = True)
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join("artifacts", "model.pk1")
+    #trained_model_file_path = os.path.join("artifacts", "model.pk1")
+    trained_model_file_path = str(ARTIFACTS_DIR / "model.pk1")
+
 
 class ModelTrainer:
     def __init__(self):
