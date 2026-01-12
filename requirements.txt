@@ -5,8 +5,8 @@ scikit-learn
 #statsmodels
 #matplotlib
 #scipy
-catboost
-xgboost
+catboost-cpu
+xgboost-cpu
 dill
 flask
 -e .
