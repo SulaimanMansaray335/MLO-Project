@@ -20,8 +20,8 @@ ARTIFACTS_DIR.mkdir(parents = True, exist_ok = True)
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join(ARTIFACTS_DIR, "preprocessor.pk1")
-    #trained_model_file_path = str(ARTIFACTS_DIR / "preprocessor.pk1")
+    #preprocessor_obj_file_path = os.path.join(ARTIFACTS_DIR, "preprocessor.pk1")
+    preprocessor_obj_file_path = str(ARTIFACTS_DIR / "preprocessor.pk1")
 
 class DataTransformation:
     def __init__(self):
